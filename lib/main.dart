@@ -1,17 +1,17 @@
 import 'package:flutter_web/material.dart';
+import 'package:fweb_map/flutter_webview_plugin/flutter_webview_plugin.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MapApp());
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class MapApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Map Testing',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Map Demo Home Page'),
     );
   }
 }
@@ -23,39 +23,12 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (choose the "Toggle Debug Paint" action
-          // from the Flutter Inspector in Android Studio, or the "Toggle Debug
-          // Paint" command in Visual Studio Code) to see the wireframe for each
-          // widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Hello, World!',
-            ),
-          ],
-        ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+    return WebviewScaffold(
+           appBar: AppBar(
+             title: Text(title),
+           ),
+           //https://earth.google.com/web/@30.5160865,76.6597778,274.66580794a,895.08429529d,35y,0h,45t,0r/data=ChQaEgoKL20vMDR6enowNhgCIAEoAigC
+           url: "https://www.google.com/maps/place/Chitkara+University/@30.5160865,76.6575891,931m/data=!3m1!1e3!4m5!3m4!1s0x390fc32344a6e2d7:0x81b346dee91799ca!8m2!3d30.5160865!4d76.6597778",
     );
   }
 }
