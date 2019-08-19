@@ -8,6 +8,7 @@ class MapApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Map Testing',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -27,8 +28,10 @@ class MyHomePage extends StatelessWidget {
            appBar: AppBar(
              title: Text(title),
            ),
-           //https://earth.google.com/web/@30.5160865,76.6597778,274.66580794a,895.08429529d,35y,0h,45t,0r/data=ChQaEgoKL20vMDR6enowNhgCIAEoAigC
-           url: "https://www.google.com/maps/place/Chitkara+University/@30.5160865,76.6575891,931m/data=!3m1!1e3!4m5!3m4!1s0x390fc32344a6e2d7:0x81b346dee91799ca!8m2!3d30.5160865!4d76.6597778",
+           //url: 'http://127.0.0.1:8080',
+           //url: "https://earth.google.com/web/@30.5160865,76.6597778,274.66580794a,895.08429529d,35y,0h,45t,0r/data=ChQaEgoKL20vMDR6enowNhgCIAEoAigC",
+           url: 'https://google.com',
+           //url: "https://www.google.com/maps/place/Chitkara+University/@30.5160865,76.6575891,931m/data=!3m1!1e3!4m5!3m4!1s0x390fc32344a6e2d7:0x81b346dee91799ca!8m2!3d30.5160865!4d76.6597778",
     );
   }
 }
